@@ -1,8 +1,10 @@
 @extends('layout')
 
 @section('content')
-    <div class="container">
-        <h1 class="my-4">Add New Item</h1>
+    <div class="card bg-dark text-white mb-3">
+        <div class="card-header"> 
+        Add New Item
+        </div>
         @if ($errors->any())
             <div class="alert alert-danger">
                 <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -13,6 +15,7 @@
                 </ul>
             </div>
         @endif
+        <div class="card-body">
         <form action="{{ route('items.store') }}" method="POST">
             @csrf
             <div class="mb-3">
@@ -29,5 +32,6 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        </div>
     </div>
 @endsection
