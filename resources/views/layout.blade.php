@@ -3,6 +3,14 @@
 <head>
     <title>Stock App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        function confirmDelete(event) {
+            event.preventDefault();
+            if (confirm("Apakah Kamu Yakin ingin menghapus item ini?")) {
+                event.target.submit();
+            }
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
