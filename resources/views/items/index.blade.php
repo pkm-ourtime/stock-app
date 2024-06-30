@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1 class="my-4">Items</h1>
+        <h2 class="my-4">Items</h2>
         <div class="card">
             <div class="card-header">
                 <a class="btn btn-primary" href="{{ route('items.create') }}">Add Item</a>

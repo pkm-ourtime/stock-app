@@ -24,9 +24,16 @@ class ItemController extends Controller
             'name' => 'required',
             'quantity' => 'required|integer',
             'price' => 'required|numeric',
+            'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
-        Item::create($request->all());
+        $data = $request->all();
+
+        if ($request->hasFile('img')) {
+            $data['img'] = $request->file('img')->store('img', 'public');
+        }
+
+        Item::create($data);
         return redirect()->route('items.index')->with('success', 'Item created successfully.');
     }
 

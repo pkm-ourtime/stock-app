@@ -16,7 +16,7 @@
             </div>
         @endif
         <div class="card-body">
-        <form action="{{ route('items.store') }}" method="POST">
+        <form action="{{ route('items.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
@@ -29,6 +29,10 @@
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
                 <input type="text" name="price" class="form-control" id="price" placeholder="Enter item price">
+            </div>
+            <div class="mb-3">
+                <label for="img" class="form-label">Image</label>
+                <input type="file" name="img" class="form-control" id="img">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
