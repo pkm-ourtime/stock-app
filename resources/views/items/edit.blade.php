@@ -2,7 +2,10 @@
 
 @section('content')
     <div class="container">
-        <h1 class="my-4">Edit Item</h1>
+        <div class="card bg-dark text-white">
+        <div class="card-header">
+            Edit Item
+        </div>
         @if ($errors->any())
             <div class="alert alert-danger">
                 <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -13,6 +16,7 @@
                 </ul>
             </div>
         @endif
+        <div class="card-body">
         <form action="{{ route('items.update', $item->id) }}" method="POST">
             @csrf
             @method('PUT')
@@ -30,5 +34,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+    </div>
+    </div>
     </div>
 @endsection
