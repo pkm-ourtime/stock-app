@@ -30,10 +30,10 @@
                 <label for="price" class="form-label">Price</label>
                 <input type="text" name="price" class="form-control" id="price" placeholder="Enter item price">
             </div>
-            <div class="mb-3">
+            <!-- <div class="mb-3">
                 <label for="img" class="form-label">Image</label>
                 <input type="file" name="img" class="form-control" id="img">
-            </div>
+            </div> -->
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         </div>
