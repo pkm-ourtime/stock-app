@@ -24,7 +24,7 @@ class ItemController extends Controller
             'name' => 'required',
             'quantity' => 'required|integer',
             'price' => 'required|numeric',
-            'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            // 'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
         $data = $request->all();
