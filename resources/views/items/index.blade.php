@@ -24,7 +24,7 @@
                         <tr>
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->quantity }}</td>
-                            <td>Rp. {{ $item->price }}</td>
+                            <td>$ {{ $item->price }}</td>
                             <td>
                                 <form action="{{ route('items.destroy', $item->id) }}" method="POST" onsubmit="confirmDelete(event)">
                                     <a class="btn btn-info" href="{{ route('items.show', $item->id) }}">Show</a>

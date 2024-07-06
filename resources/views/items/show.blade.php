@@ -5,9 +5,6 @@
         <h2 class="my-4">Item Details</h2>
         <div class="card" style="max-width: 18rem;">
             <div class="card-header" style="text-align: center">
-                @if ($item->img)
-                <img src="{{ asset('storage/' . $item->img) }}" alt="{{ $item->name }}">
-                @endif
             </div>
             <div class="card-body">
                 <p class="card-text">Name: {{ $item->name }}</p>
