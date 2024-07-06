@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="{{ asset('css\styles.css') }}">
 </head>
 <body>
-    <div class="login-page">
+    <div class="auth-page">
         <div class="form">
             <h1>Stock App</h1>
-            <form class="login-form" method="POST" action="{{ route('login') }}">
+            <form class="auth-form" method="POST" action="{{ route('login') }}">
                 @csrf
                 <div>
                     <input type="email" placeholder="Email" id="email" name="email" required>
@@ -17,6 +17,7 @@
                     <input type="password" placeholder="Password" id="password" name="password" required>
                 </div>
                 <button type="submit">Login</button>
+                <a href="{{ url('/register') }}">Register</a>
             </form>
         </div>
     </div>
